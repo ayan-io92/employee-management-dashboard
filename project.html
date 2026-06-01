@@ -1,0 +1,104 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Dashboard</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+
+    <h1>Employee Management Dashboard</h1>
+
+    <div class="cards">
+        <div class="card">
+            Total Employees<br>
+            3
+        </div>
+
+        <div class="card">
+            Average Salary<br>
+            $867
+        </div>
+
+        <div class="card">
+            Departments<br>
+            3
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="btnSearch">Add Employee</button>
+        <button class="btnDepartment">Search Employee...</button>
+        <button class="btnDepartment">All Departments</button>
+        <button class="btnSort">Sort Salary</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>DEPARTMENT</th>
+                <th>SALARY</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ali</td>
+                <td>IT</td>
+                <td>$800</td>
+                <td>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Ahmed</td>
+                <td>HR</td>
+                <td>$600</td>
+                <td>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Sara</td>
+                <td>Finance</td>
+                <td>$1200</td>
+                <td>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="addemployeework">
+        <h3>Add Employee</h3>
+
+        <div class="name">
+            <input type="text" id="name" placeholder="Name">
+        </div>
+        <div class="department">
+            <input type="text" id="department" placeholder="Department">
+        </div>
+        <div class="salary">
+            <input type="number" id="salary" placeholder="Salary">
+        </div>
+        <button class="save">save</button>
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>
