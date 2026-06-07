@@ -1,7 +1,6 @@
-</html>
 <!DOCTYPE html>
+</html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,91 +15,53 @@
     <div class="cards">
         <div class="card">
             Total Employees<br>
-            3
+            <span id="totalEmp">0</span>
         </div>
 
         <div class="card">
             Average Salary<br>
-            $867
+            $0<span id="avgSalary">0</span>
         </div>
 
         <div class="card">
             Departments<br>
-            3
+            <span id="totalDept">0</span>
         </div>
     </div>
 
     <div class="buttons">
-        <button class="btnSearch">Add Employee</button>
-        <div class="search">
-            <input type="text" id="Search employee" placeholder="Name">
-        </div>
-        <div class="search">
-            <input type="text" id="alldeparments" placeholder="All deparments">
-        </div>
-        <button class="btnSort">Sort Salary</button>
+        <button class="btnSearch" onclick="openModal()">Add Employee</button>
+        <input type="text" placeholder="Search employee" class="search">
+        <input type="text" placeholder="All departments" class="search">
+        <button class="btnSort" onclick="sortData()">Sort Salary</button>
     </div>
 
-    <table>
+    <table class="tablebody">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>NAME</th>
-                <th>DEPARTMENT</th>
-                <th>SALARY</th>
-                <th>ACTION</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Action</th>
             </tr>
         </thead>
-
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Ali</td>
-                <td>IT</td>
-                <td>$800</td>
-                <td>
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                </td>
-            </tr>
-
-            <tr>
-                <td>2</td>
-                <td>Ahmed</td>
-                <td>HR</td>
-                <td>$600</td>
-                <td>
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                </td>
-            </tr>
-
-            <tr>
-                <td>3</td>
-                <td>Sara</td>
-                <td>Finance</td>
-                <td>$1200</td>
-                <td>
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                </td>
-            </tr>
-        </tbody>
     </table>
+    <div class="modal" id="employeeModal">
+        <div class="addemployeework">
+            <h3>Add Employee</h3>
 
-    <div class="addemployeework">
-        <h3>Add Employee</h3>
-
-        <div class="name">
-            <input type="text" id="name" placeholder="Name">
+            <div class="name">
+                <input type="text" id="name" placeholder="Name">
+            </div>
+            <div class="department">
+                <input type="text" id="department" placeholder="Department">
+            </div>
+            <div class="salary">
+                <input type="number" id="salary" placeholder="Salary">
+            </div>
+            <button class="save" onclick="closeModal()">save</button>
         </div>
-        <div class="department">
-            <input type="text" id="department" placeholder="Department">
-        </div>
-        <div class="salary">
-            <input type="number" id="salary" placeholder="Salary">
-        </div>
-        <button class="save">save</button>
     </div>
     <script src="project.js"></script>
 </body>
