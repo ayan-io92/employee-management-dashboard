@@ -34,7 +34,7 @@ h1 {
 .btnSearch {
     padding: 10px 20px;
     border: none;
-    background-color: #0977ea;
+    background-color: #078ff0;
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -44,11 +44,12 @@ h1 {
 
 .search {
     height: 45px;
+    width: 220px;
     padding: 0 15px;
     border: none;
     border-radius: 6px;
     background-color: #fff;
-    color: #b6b1bb;
+    color: #000;
     font-size: 20px;
     font-family: Segoe UI;
     font-size: 16px;
@@ -83,16 +84,14 @@ table {
 }
 
 th {
-    background-color: #0977ea;
+    background-color: #078ff0;
     color: white;
     padding: 12px;
-    border: 1px solid #ddd;
     text-align: left;
 }
 
 td {
     padding: 12px;
-    border: 1px solid #ddd;
 }
 
 .edit-btn {
@@ -113,14 +112,15 @@ td {
 }
 
 .modal {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    visibility: hidden;
-    position: fixed;
-    height: 100vh;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
+    height: 100vh;
+    width: 100%;
     background-color: #7c7c7c;
 }
 
@@ -148,6 +148,7 @@ td {
 }
 
 .addemployeework input {
+    height: 25p;
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -164,8 +165,4 @@ td {
     border-radius: 4px;
     cursor: pointer;
     font-size: 20px;
-}
-
-.addemployeework .save:hover {
-    background-color: #0064f6;
 }

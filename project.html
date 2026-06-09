@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+
 </html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,28 +16,38 @@
 
     <div class="cards">
         <div class="card">
-            Total Employees<br>
-            <span id="totalEmp">0</span>
+            Total Employees<br />
+            <span id="totalEmp" style="font-size: 23px;">0</span>
         </div>
 
         <div class="card">
-            Average Salary<br>
-            $0<span id="avgSalary">0</span>
+            Average Salary<br />
+            $<span id="avgSalary" style="font-size: 23px;">$0</span>
         </div>
 
         <div class="card">
-            Departments<br>
-            <span id="totalDept">0</span>
+            Departments<br />
+            <span id="totalDept" style="font-size: 23px;">0</span>
         </div>
     </div>
 
     <div class="buttons">
         <button class="btnSearch" onclick="openModal()">Add Employee</button>
-        <input type="text" placeholder="Search employee" class="search">
-        <input type="text" placeholder="All departments" class="search">
+        <select class="search">
+            <option value="">Search Employee</option>
+            <option value="Ali">Ali</option>
+            <option value="Ahmed">Ahmed</option>
+            <option value="Usman">Usman</option>
+            <option value="Ayan">Ayan</option>
+        </select>
+        <select class="search">
+            <option value="">All Departments</option>
+            <option value="IT">IT</option>
+            <option value="HR">HR</option>
+            <option value="Finance">Finance</option>
+        </select>
         <button class="btnSort" onclick="sortData()">Sort Salary</button>
     </div>
-
     <table class="tablebody">
         <thead>
             <tr>
@@ -50,7 +62,6 @@
     <div class="modal" id="employeeModal">
         <div class="addemployeework">
             <h3>Add Employee</h3>
-
             <div class="name">
                 <input type="text" id="name" placeholder="Name">
             </div>
@@ -60,10 +71,12 @@
             <div class="salary">
                 <input type="number" id="salary" placeholder="Salary">
             </div>
-            <button class="save" onclick="closeModal()">save</button>
+            <button onclick="closeModal()">save</button>
         </div>
     </div>
-    <script src="project.js"></script>
+    <script src="project.js">
+
+    </script>
 </body>
 
 </html>
