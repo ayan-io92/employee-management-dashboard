@@ -112,7 +112,6 @@ td {
 }
 
 .modal {
-    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,7 +147,7 @@ td {
 }
 
 .addemployeework input {
-    height: 25p;
+    height: 25px;
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;

@@ -22,7 +22,7 @@
 
         <div class="card">
             Average Salary<br />
-            $<span id="avgSalary" style="font-size: 23px;">$0</span>
+            <span id="avgSalary" style="font-size: 23px;">$0</span>
         </div>
 
         <div class="card">
@@ -40,7 +40,7 @@
             <option value="Usman">Usman</option>
             <option value="Ayan">Ayan</option>
         </select>
-        <select class="search">
+        <select class="search" name="departments" onchange="populateData()">
             <option value="">All Departments</option>
             <option value="IT">IT</option>
             <option value="HR">HR</option>
@@ -48,17 +48,18 @@
         </select>
         <button class="btnSort" onclick="sortData()">Sort Salary</button>
     </div>
-    <table class="tablebody">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Department</th>
-                <th>Salary</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-    </table>
+ <table class="tablebody">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="tableData"></tbody>
+</table>
     <div class="modal" id="employeeModal">
         <div class="addemployeework">
             <h3>Add Employee</h3>
