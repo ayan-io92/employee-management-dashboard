@@ -55,6 +55,19 @@ h1 {
     font-size: 16px;
 }
 
+.semp {
+    height: 45px;
+    width: 220px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+    font-family: Segoe UI;
+    font-size: 16px;
+}
+
 .btndepartments {
     padding: 10px 20px;
     border: none;
@@ -112,26 +125,27 @@ td {
 }
 
 .modal {
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100px;
     width: 100%;
-    background-color: #7c7c7c;
+    background-color: #00000078;
+    visibility: hidden;
 }
 
 .addemployeework {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 370px;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    align-items: center;
-    justify-content: center;
     padding: 20px;
 
 }
@@ -142,17 +156,34 @@ td {
     color: #333;
 }
 
-.addemployeework div {
-    margin-bottom: 10px;
+.addemployeework .search {
+    width: 320px;
+    height: 50px;
+    padding: 0 12px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.addemployeework input {
-    height: 25px;
-    width: 100%;
-    padding: 10px;
+.addemployeework .name {
+    width: 320px;
+    height: 50px;
+    padding: 0 12px;
+    font-size: 18px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.addemployeework .salary {
+    width: 320px;
+    height: 50px;
+    padding: 0 12px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .addemployeework .save {
@@ -163,5 +194,5 @@ td {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
 }

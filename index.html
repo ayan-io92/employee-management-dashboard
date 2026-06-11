@@ -33,14 +33,8 @@
 
     <div class="buttons">
         <button class="btnSearch" onclick="openModal()">Add Employee</button>
-        <select class="search">
-            <option value="">Search Employee</option>
-            <option value="Ali">Ali</option>
-            <option value="Ahmed">Ahmed</option>
-            <option value="Usman">Usman</option>
-            <option value="Ayan">Ayan</option>
-        </select>
-        <select class="search" name="departments" onchange="populateData()">
+        <input type="text" class="semp" placeholder="Search employee" id="SearchEmployee" oninput="populateData()">
+        <select class="search" name="departments" id="searchDepartment" onchange="populateData()">
             <option value="">All Departments</option>
             <option value="IT">IT</option>
             <option value="HR">HR</option>
@@ -48,31 +42,35 @@
         </select>
         <button class="btnSort" onclick="sortData()">Sort Salary</button>
     </div>
- <table class="tablebody">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Department</th>
-            <th>Salary</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody id="tableData"></tbody>
-</table>
+    <table class="tablebody">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+    </table>
     <div class="modal" id="employeeModal">
         <div class="addemployeework">
             <h3>Add Employee</h3>
             <div class="name">
                 <input type="text" id="name" placeholder="Name">
             </div>
-            <div class="department">
-                <input type="text" id="department" placeholder="Department">
-            </div>
+
+            <select class="search" name="departments" id="searchDepartment">
+                <option value="">Departments</option>
+                <option value="IT">IT</option>
+                <option value="HR">HR</option>
+                <option value="Finance">Finance</option>
+            </select>
             <div class="salary">
                 <input type="number" id="salary" placeholder="Salary">
             </div>
-            <button onclick="closeModal()">save</button>
+            <button onclick="closeModal()" class="save">save</button>
         </div>
     </div>
     <script src="project.js">

@@ -1,19 +1,22 @@
-const modal = document.getElementById("employeemodal");
-const tableBody = document.getElementById("tableBody");
-const totalEmp = document.getElementById("totalemp");
+const modal = document.getElementById("employeeModal");
+const tableBody = document.getElementById("tableData");
+const totalEmp = document.getElementById("totalEmp");
 const avgSalary = document.getElementById("avgSalary");
-const totalDept = document.getElementById("totaldept");
+const totalDept = document.getElementById("totalDept");
+
 let data = [
   { id: 1, name: "Ali", dept: "Sales", salary: 5000 },
   { id: 2, name: "Kashan", dept: "Development", salary: 60000 },
 ];
-const modal = document.getElementById("employeeModal");
+
 function openModal() {
   modal.style.visibility = "visible";
 }
+
 function closeModal() {
   modal.style.visibility = "hidden";
 }
+
 function populateData() {
   totalEmp.textContent = data.length;
   avgSalary.textContent = data.forEach((element) => {});
@@ -23,19 +26,18 @@ function sortData() {}
 
 function populateData() {
   tableBody.innerHTML = "";
+  let newData = [...data];
   const search = document.getElementById("SearchEmployee").value.toLowerCase();
   const dept = document.getElementById("searchDepartment").value;
   if (search) {
-    employees = employees.filter((emp) =>
-      emp.name.toLowerCase().includes(search),
-    );
+    newData = data.filter((emp) => emp.name.toLowerCase().includes(search));
   }
   if (dept) {
-    employees = employees.filter(
+    newData = data.filter(
       (emp) => emp.dept.toLowerCase() === dept.toLowerCase(),
     );
   }
-  data.forEach((emp) => {
+  newData.forEach((emp) => {
     tableBody.innerHTML += `
         <tr>
             <td>${emp.id}</td>
@@ -56,7 +58,8 @@ function populateData() {
 function updateTotals() {
   totalEmp.textContent = data.length;
 
-  let avg = data.reduce((x, y) => x + y.salary, 0) / data.length;
+  let avg =
+    data.length > 0 ? data.reduce((x, y) => x + y.salary, 0) / data.length : 0;
   avgSalary.textContent = "$" + avg.toFixed(0);
 
   let total = new Set(data.map((d) => d.dept));
@@ -64,16 +67,19 @@ function updateTotals() {
 }
 
 function editEmp(id) {
-  if (!id) console.error("Employee not found");
+  if (!id) {
+    console.error("Employee not found");
+    return;
+  }
   console.log("Employee was edited");
-  return;
 }
 
 function deleteEmp(id) {
-  if (!id) console.error("Employee not found");
-  console.log("Employee was deleted");
-  return;
-  data = data.filter((x) => x.id != id);
+  if (!id) {
+    console.error("Employee not found");
+    return;
+  }
+  data = data.filter((x) => x.id !== id);
   populateData();
 }
 populateData();
