@@ -4,9 +4,14 @@ const totalEmp = document.getElementById("totalEmp");
 const avgSalary = document.getElementById("avgSalary");
 const totalDept = document.getElementById("totalDept");
 
+let ascending = true;
+
 let data = [
-  { id: 1, name: "Ali", dept: "Sales", salary: 5000 },
+  { id: 1, name: "Ali", dept: "Sales", salary: 25000 },
   { id: 2, name: "Kashan", dept: "Development", salary: 60000 },
+  { id: 3, name: "Bilal", dept: "HR", salary: 50000 },
+  { id: 4, name: "Ayan", dept: "IT", salary: 40000 },
+  { id: 5, name: "Arham", dept: "IT", salary: 30000 },
 ];
 
 function openModal() {
@@ -22,7 +27,14 @@ function populateData() {
   avgSalary.textContent = data.forEach((element) => {});
 }
 populateData();
-function sortData() {}
+function sortData() {
+  employees.sort((a, b) => {
+    ascending ? a.salary - b.salary : b.salary - a.salary;
+  });
+
+  ascending = !ascending;
+  populateData();
+}
 
 function populateData() {
   tableBody.innerHTML = "";

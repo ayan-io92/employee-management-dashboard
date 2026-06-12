@@ -42,9 +42,9 @@ h1 {
     font-size: 16px;
 }
 
-.search {
+.semp {
     height: 45px;
-    width: 220px;
+    width: 180px;
     padding: 0 15px;
     border: none;
     border-radius: 6px;
@@ -55,9 +55,9 @@ h1 {
     font-size: 16px;
 }
 
-.semp {
+.search {
     height: 45px;
-    width: 220px;
+    width: 180px;
     padding: 0 15px;
     border: none;
     border-radius: 6px;
@@ -130,63 +130,49 @@ td {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 5px;
     top: 0;
     left: 0;
-    height: 100px;
+    height: 100vh;
     width: 100%;
-    background-color: #00000078;
+    background-color: #2d2c2c85;
     visibility: hidden;
 }
 
-.addemployeework {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 370px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-
-}
-
-.addemployeework h3 {
+.modal h3 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
 }
 
-.addemployeework .search {
-    width: 320px;
-    height: 50px;
-    padding: 0 12px;
-    font-size: 18px;
+.modal .name {
+    height: 40px;
+    width: 100%;
+    padding: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 15px;
 }
 
-.addemployeework .name {
-    width: 320px;
-    height: 50px;
-    padding: 0 12px;
-    font-size: 18px;
+.modal .departments {
+    height: 40px;
+    width: 100%;
+    padding: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 15px;
 }
 
-.addemployeework .salary {
-    width: 320px;
-    height: 50px;
-    padding: 0 12px;
-    font-size: 18px;
+.modal .salary {
+    height: 40px;
+    width: 100%;
+    padding: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 15px;
 }
 
-.addemployeework .save {
+.modal .save {
     width: 20%;
     height: 40px;
     background-color: #0078ff;
@@ -194,5 +180,5 @@ td {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 15px;
 }

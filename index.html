@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 </html>
 <html lang="en">
 
@@ -37,6 +36,8 @@
         <select class="search" name="departments" id="searchDepartment" onchange="populateData()">
             <option value="">All Departments</option>
             <option value="IT">IT</option>
+            <option value="Development">Development</option>
+            <option value="Sales">Sales</option>
             <option value="HR">HR</option>
             <option value="Finance">Finance</option>
         </select>
@@ -55,27 +56,26 @@
         <tbody id="tableData"></tbody>
     </table>
     <div class="modal" id="employeeModal">
-        <div class="addemployeework">
-            <h3>Add Employee</h3>
-            <div class="name">
-                <input type="text" id="name" placeholder="Name">
-            </div>
-
-            <select class="search" name="departments" id="searchDepartment">
-                <option value="">Departments</option>
-                <option value="IT">IT</option>
-                <option value="HR">HR</option>
-                <option value="Finance">Finance</option>
-            </select>
-            <div class="salary">
-                <input type="number" id="salary" placeholder="Salary">
-            </div>
-            <button onclick="closeModal()" class="save">save</button>
+        <h3>Add Employee</h3>
+        <div class="name">
+            <input type="text" id="name" placeholder="Name">
         </div>
-    </div>
-    <script src="project.js">
 
-    </script>
+        <select class="departments" id="searchDepartment">
+            <option value="">Departments</option>
+            <option value="IT">IT</option>
+            <option value="Development">Development</option>
+            <option value="Sales">Sales</option>
+            <option value="HR">HR</option>
+            <option value="Finance">Finance</option>
+        </select>
+        <div class="salary">
+            <input type="number" id="salary" placeholder="Salary">
+        </div>
+        <button onclick="closeModal()" class="save">save</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
